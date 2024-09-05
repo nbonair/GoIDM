@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"log"
+
+	"github.com/nbonair/GoIDM/internal/handlers/http"
+)
 
 func main() {
-	fmt.Println("Hello world!")
+	server := http.NewServer()
+	if err := server.Start(); err != nil {
+		log.Fatal(err)
+	}
 }

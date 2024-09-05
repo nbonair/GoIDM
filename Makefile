@@ -1,6 +1,6 @@
 VERSION := $(shell cat VERSION)
 COMMIT_HASH := $(shell git rev-parse HEAD)
-PROJECT_NAME := goload
+PROJECT_NAME := goidm
 
 all: generate build-all
 
@@ -66,7 +66,7 @@ clean:
 
 .PHONY: run-serve
 run-serve:
-	go run cmd/$(PROJECT_NAME)/*.go serve
+	go run cmd/$(PROJECT_NAME)/main.go serve
 
 .PHONY: lint
 lint:
